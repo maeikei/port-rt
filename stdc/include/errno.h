@@ -159,7 +159,7 @@ __BEGIN_DECLS
 
 
 /* internal function returning the address of the thread-specific errno */
-extern volatile int*   __errno(void);
+extern volatile int*   CLANG_PORT_DECL(errno)(void);
 /* a macro expanding to the errno l-value */
 #define  errno   (*__errno())
 
