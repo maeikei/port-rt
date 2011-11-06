@@ -66,7 +66,7 @@ extern int CLANG_PORT_DECL(feupdateenv)(const fenv_t *envp);
 #ifndef __IMPL_CLANG_PORT_API__
 typedef CLANG_STRUCT(fexcept_t) fexcept_t;
 typedef CLANG_STRUCT(fenv_t) fenv_t;
-#endif
+
 
 	
 /*
@@ -126,7 +126,7 @@ CLANG_PORT_INLINE int feupdateenv(const fenv_t *envp)
 }
 
 
-
+#endif
 
 
 __END_DECLS
