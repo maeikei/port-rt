@@ -19,12 +19,12 @@
 #ifdef NDEBUG
 # define assert(e)	((void)0)
 #else /* debugging enabled */
-# define	assert(e)	((e) ? (void)0 : CLANG_PORT_CALL_FPTR(__assert2)(__FILE__, __LINE__, __func__, #e))
+# define	assert(e)	((e) ? (void)0 : CLANG_PORT_CALL_FPTR(assert)(__FILE__, __LINE__, __func__, #e))
 #endif	/* NDEBUG */
 
 __BEGIN_DECLS
 
-void CLANG_PORT_DECL(__assert2)(const char *, int, const char *, const char *);
+void CLANG_PORT_DECL(assert)(const char *, int, const char *, const char *);
 
 __END_DECLS
 
