@@ -24,7 +24,7 @@
 
 __BEGIN_DECLS
 
-void __assert2(const char *, int, const char *, const char *);
+void CLANG_PORT_DECL(__assert2)(const char *, int, const char *, const char *);
 
 __END_DECLS
 
