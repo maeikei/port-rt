@@ -127,7 +127,7 @@ long double cimagl(long double complex z);
 double complex CMPLX(double x, double y); 
 float complex CMPLXF(float x, float y); 
 long double complex CMPLXL(long double x, long double y);
-ouble complex conj(double complex z); 
+double complex conj(double complex z); 
 float complex conjf(float complex z); 
 long double complex conjl(long double complex z);
 double complex cproj(double complex z); 

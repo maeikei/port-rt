@@ -1,4 +1,5 @@
 include_directories(${CMAKE_SOURCE_DIR}/stdc/include)
+include_directories(${CMAKE_SOURCE_DIR}/stdc/src/include)
 
 set( SOURCES
 	assert.c

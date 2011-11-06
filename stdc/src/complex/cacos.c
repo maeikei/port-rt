@@ -7,6 +7,9 @@
 #include <math.h>
 #include <complex.h>
 
+
+#include <complex_internal.h>
+
 #if 0
 /* cacos (Z) = -I * clog(Z + I * csqrt(1 - Z * Z)) */
 

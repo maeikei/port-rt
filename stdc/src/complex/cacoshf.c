@@ -7,6 +7,10 @@
 #include <math.h>
 #include <complex.h>
 
+
+#include <complex_internal.h>
+
+
 #if 0
 /* cacoshf (z) = I * cacos (z)  */
 float complex cacosh (float complex Z)
