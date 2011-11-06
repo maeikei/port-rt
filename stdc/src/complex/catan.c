@@ -11,6 +11,10 @@
 #include <complex.h>
 #include <errno.h>
 
+#include <complex_internal.h>
+#include <math_internal.h>
+
+
 /* catan (z) = -I/2 * clog ((I + z) / (I - z)) */ 
 
 double complex 

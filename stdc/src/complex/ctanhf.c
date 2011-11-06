@@ -10,6 +10,9 @@
 #include <complex.h>
 #include <errno.h>
 
+
+#include <math_internal.h>
+
 /*
   ctanh (x + I * y) = (sinh (2 * x)  +  sin (2 * y) * I )
 		     / (cosh (2 * x) + cos (2 * y)) .

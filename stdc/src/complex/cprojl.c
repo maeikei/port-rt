@@ -7,6 +7,9 @@
 #include <math.h>
 #include <complex.h>
 
+#include <math_internal.h>
+
+
 /* Return the value of the projection onto the Riemann sphere.*/
 
 long double complex cprojl (long double complex Z)

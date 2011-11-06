@@ -10,6 +10,10 @@
 #include <errno.h>
 
 
+
+#include <math_internal.h>
+
+
 /* ctan (x + I * y) = (sin (2 * x)  +  I * sinh(2 * y))
 		      / (cos (2 * x)  +  cosh (2 * y)) */
 
