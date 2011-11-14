@@ -109,24 +109,78 @@ long double CLANG_PORT_DECL(creall)(long double complex z);
 /*
  * Trigonometric functions
  */
-double complex cacos(double complex z); 
-float complex cacosf(float complex z); 
-long double complex cacosl(long double complex z);
-double complex casin(double complex z); 
-float complex casinf(float complex z); 
-long double complex casinl(long double complex z);
-double complex catan(double complex z); 
-float complex catanf(float complex z); 
-long double complex catanl(long double complex z);
-double complex ccos(double complex z); 
-float complex ccosf(float complex z); 
-long double complex ccosl(long double complex z);
-double complex csin(double complex z); 
-float complex csinf(float complex z); 
-long double complex csinl(long double complex z);
-double complex ctan(double complex z); 
-float complex ctanf(float complex z); 
-long double complex ctanl(long double complex z);
+CLANG_PORT_INLINE double complex cacos(double complex z)
+{
+	return CLANG_PORT_CALL(cacos)(z);
+}
+CLANG_PORT_INLINE float complex cacosf(float complex z)
+{
+	return CLANG_PORT_CALL(cacosf)(z);
+}
+CLANG_PORT_INLINE long double complex cacosl(long double complex z)
+{
+	return CLANG_PORT_CALL(cacosl)(z);
+}
+CLANG_PORT_INLINE double complex casin(double complex z)
+{
+	return CLANG_PORT_CALL(casin)(z);
+}
+CLANG_PORT_INLINE float complex casinf(float complex z)
+{
+	return CLANG_PORT_CALL(casinf)(z);
+}
+CLANG_PORT_INLINE long double complex casinl(long double complex z)
+{
+	return CLANG_PORT_CALL(casinl)(z);
+}
+CLANG_PORT_INLINE double complex catan(double complex z)
+{
+	return CLANG_PORT_CALL(catan)(z);
+}
+CLANG_PORT_INLINE float complex catanf(float complex z)
+{
+	return CLANG_PORT_CALL(catanf)(z);
+}
+CLANG_PORT_INLINE long double complex catanl(long double complex z)
+{
+	return CLANG_PORT_CALL(catanl)(z);
+}
+CLANG_PORT_INLINE double complex ccos(double complex z)
+{
+	return CLANG_PORT_CALL(ccos)(z);
+}
+CLANG_PORT_INLINE float complex ccosf(float complex z)
+{
+	return CLANG_PORT_CALL(ccosf)(z);
+}
+CLANG_PORT_INLINE long double complex ccosl(long double complex z)
+{
+	return CLANG_PORT_CALL(ccosl)(z);
+}
+CLANG_PORT_INLINE double complex csin(double complex z)
+{
+	return CLANG_PORT_CALL(csin)(z);
+}
+CLANG_PORT_INLINE float complex csinf(float complex z)
+{
+	return CLANG_PORT_CALL(csinf)(z);
+}
+CLANG_PORT_INLINE long double complex csinl(long double complex z)
+{
+	return CLANG_PORT_CALL(csinl)(z);
+}
+CLANG_PORT_INLINE double complex ctan(double complex z)
+{
+	return CLANG_PORT_CALL(ctan)(z);
+}
+CLANG_PORT_INLINE float complex ctanf(float complex z)
+{
+	return CLANG_PORT_CALL(ctanf)(z);
+}
+CLANG_PORT_INLINE long double complex ctanl(long double complex z)
+{
+	return CLANG_PORT_CALL(ctanl)(z);
+}
 
 
 
