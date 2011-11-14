@@ -3,6 +3,7 @@ include_directories(${CMAKE_SOURCE_DIR}/stdc/src/include)
 
 set( SOURCES
 	assert.c
+	assert.c
 )
 aux_source_directory(complex COMPLEX_SOURCES)
 aux_source_directory(stdio STDIO_SOURCES)
