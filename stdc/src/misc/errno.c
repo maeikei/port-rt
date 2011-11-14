@@ -26,9 +26,11 @@
  * SUCH DAMAGE.
  */
 #include <errno.h>
-#include <bionic_tls.h>
+// #include <bionic_tls.h>
+static int ___errno = 0; 
 
-volatile int*  __errno( void )
+volatile int*  CLANG_PORT_CALL_FPTR(errno)( void )
 {
-  return  &((volatile int*)__get_tls())[TLS_SLOT_ERRNO];
+	return (volatile int*)&(___errno);
+//  return  &((volatile int*)__get_tls())[TLS_SLOT_ERRNO];
 }

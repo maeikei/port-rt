@@ -126,7 +126,7 @@ CLANG_PORT_INLINE int feupdateenv(const fenv_t *envp)
 }
 
 
-#endif
+#endif // __IMPL_CLANG_PORT_API__
 
 
 __END_DECLS
