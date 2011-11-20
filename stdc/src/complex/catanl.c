@@ -23,7 +23,7 @@
 #endif
 
 long double complex 
-catanl (long double complex Z)
+CLANG_PORT_DECL(catanl) (long double complex Z)
 {
   long double complex Res;
   long double complex Tmp;

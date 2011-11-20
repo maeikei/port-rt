@@ -11,7 +11,7 @@
 /* csin (x + I * y) = sin (x) * cosh (y)
     + I * (cos (x) * sinh (y)) */ 
 
-double complex csin (double complex Z)
+double complex CLANG_PORT_DECL(csin) (double complex Z)
 {
   double complex Res;
   __real__ Res = sin (__real__ Z) * cosh ( __imag__ Z);

@@ -10,7 +10,7 @@
 /* ccosh (x + I * y) = cosh (x) * cos (y)
     + I * (sinh (x) * sin (y)) */ 
 
-double complex ccosh (double complex Z)
+double complex CLANG_PORT_DECL(ccosh) (double complex Z)
 {
   double complex Res;
   __real__ Res = cosh (__real__ Z) * cos (__imag__ Z);

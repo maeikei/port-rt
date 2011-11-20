@@ -17,7 +17,7 @@
 /* ctan (x + I * y) = (sin (2 * x)  +  I * sinh(2 * y))
 		      / (cos (2 * x)  +  cosh (2 * y)) */
 
-long double complex ctanl (long double complex Z)
+long double complex CLANG_PORT_DECL(ctanl) (long double complex Z)
 {
   long double complex Res;
   long double two_I = 2.0L * __imag__ Z;

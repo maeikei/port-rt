@@ -9,7 +9,7 @@
 
 /* casin (Z ) = -I * clog(I * Z + csqrt (1.0 - Z * Z))) */
 
-float complex casinf (float complex Z)
+float complex CLANG_PORT_DECL(casinf) (float complex Z)
 {
   float complex Res;
   float x, y;

@@ -56,7 +56,7 @@ long double complex cacosl (long double  complex Z)
 #ifndef _M_PI_2L
 #define _M_PI_2L 1.5707963267948966192313L
 #endif
-long double complex cacosl (long double complex Z)
+long double complex CLANG_PORT_DECL(cacosl) (long double complex Z)
 {
   long double complex Res  = casinl (Z);
   __real__ Res = _M_PI_2L - __real__ Res;

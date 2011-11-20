@@ -9,7 +9,7 @@
 
 /* cexp (x + I * y) = exp (x) * cos (y) + I * exp (x) * sin (y) */
 
-double complex cexp (double complex Z)
+double complex CLANG_PORT_DECL(cexp) (double complex Z)
 {
   double complex  Res;
   long double rho = exp (__real__ Z);

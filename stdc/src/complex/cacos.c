@@ -57,7 +57,7 @@ double complex cacos (double  complex Z)
 
 /* cacos ( Z ) =  pi/2 - casin ( Z ) */
 
-double complex cacos (double complex Z)
+double complex CLANG_PORT_DECL(cacos) (double complex Z)
 {
   double complex Res  = casin (Z);
   __real__ Res = M_PI_2 - __real__ Res;

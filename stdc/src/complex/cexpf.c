@@ -9,7 +9,7 @@
 
 /* cexp (x + I * y) = exp (x) * cos (y) + I * exp (x) * sin (y) */
 
-float complex cexpf (float complex Z)
+float complex CLANG_PORT_DECL(cexpf) (float complex Z)
 {
   float complex  Res;
   double rho = exp (__real__ Z);

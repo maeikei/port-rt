@@ -19,7 +19,7 @@
 */
 
 float complex
-ctanhf (float complex Z)
+CLANG_PORT_DECL(ctanhf) (float complex Z)
 {
   float complex Res;
   float two_R = 2.0f * __real__ Z;

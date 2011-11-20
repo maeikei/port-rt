@@ -1,7 +1,7 @@
 #include <math.h>
 #include <complex.h>
 
-float complex  csqrtf (float complex Z)
+float complex  CLANG_PORT_DECL(csqrtf) (float complex Z)
 {
   float complex Res;
   float r;

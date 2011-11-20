@@ -19,7 +19,7 @@
 */
 
 double complex
-ctanh (double complex Z)
+CLANG_PORT_DECL(ctanh) (double complex Z)
 {
   double complex Res;
   double two_R = 2.0 * __real__ Z;

@@ -13,7 +13,7 @@
 
 /* Return the value of the projection onto the Riemann sphere.*/
 
-double complex cproj (double complex Z)
+double complex CLANG_PORT_DECL(cproj) (double complex Z)
 {
   complex double Res = Z;
   if (isinf (__real__ Z) || isinf (__imag__ Z))

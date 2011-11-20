@@ -9,7 +9,7 @@
 #include <math.h>
 #include <complex.h>
 
-double complex clog (double complex Z)
+double complex CLANG_PORT_DECL(clog) (double complex Z)
 {
   double complex Res;
   __real__ Res = log (_hypot (__real__ Z,  __imag__ Z));

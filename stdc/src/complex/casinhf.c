@@ -9,7 +9,7 @@
 
 /* casinh (z) = -I casin (I * z) */
 
-float complex casinhf (float complex Z)
+float complex CLANG_PORT_DECL(casinhf) (float complex Z)
 {
   float complex Tmp;
   float complex Res;

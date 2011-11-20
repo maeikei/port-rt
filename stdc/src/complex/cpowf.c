@@ -9,7 +9,7 @@
 #include <math.h>
 #include <complex.h>
 
-float complex cpowf (float complex X, float complex Y)
+float complex CLANG_PORT_DECL(cpowf) (float complex X, float complex Y)
 {
   float complex Res;
   float i;

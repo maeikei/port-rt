@@ -9,7 +9,7 @@
 #include <math.h>
 #include <complex.h>
 
-float complex clogf (float complex Z)
+float complex CLANG_PORT_DECL(clogf) (float complex Z)
 {
   float complex Res;
   __real__ Res = logf (_hypot (__real__ Z,  __imag__ Z));

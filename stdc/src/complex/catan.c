@@ -18,7 +18,7 @@
 /* catan (z) = -I/2 * clog ((I + z) / (I - z)) */ 
 
 double complex 
-catan (double complex Z)
+CLANG_PORT_DECL(catan) (double complex Z)
 {
   double complex Res;
   double complex Tmp;

@@ -11,7 +11,7 @@
     + I * (cosh (x) * sin (y)) */ 
 
 
-long double complex csinhl (long double complex Z)
+long double complex CLANG_PORT_DECL(csinhl) (long double complex Z)
 {
   long double complex Res;
   __real__ Res = sinhl (__real__ Z) * cosl (__imag__ Z);

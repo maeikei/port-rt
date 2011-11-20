@@ -9,7 +9,7 @@
 
 /* casin (Z ) = -I * clog(I * Z + csqrt (1.0 - Z * Z))) */
 
-double complex casin (double complex Z)
+double complex CLANG_PORT_DECL(casin) (double complex Z)
 {
   double complex Res;
   double x, y;

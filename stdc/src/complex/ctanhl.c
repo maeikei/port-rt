@@ -19,7 +19,7 @@
 */
 
 long double complex
-ctanhl (long double complex Z)
+CLANG_PORT_DECL(ctanhl) (long double complex Z)
 {
   long double complex Res;
   long double two_R = 2.0L * __real__ Z;

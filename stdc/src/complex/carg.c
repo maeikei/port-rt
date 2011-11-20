@@ -1,5 +1,5 @@
 #include <complex.h>
-double  __attribute__ ((const)) carg (double _Complex _Z)
+double  __attribute__ ((const)) CLANG_PORT_DECL(carg) (double _Complex _Z)
 {
   double res;
   __asm__ ("fpatan;"

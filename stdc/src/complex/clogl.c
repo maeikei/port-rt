@@ -9,7 +9,7 @@
 #include <math.h>
 #include <complex.h>
 
-long double complex clogl (long double complex Z)
+long double complex CLANG_PORT_DECL(clogl) (long double complex Z)
 {
   long double complex Res;
   __real__ Res = logl (hypotl (__real__ Z,  __imag__ Z));

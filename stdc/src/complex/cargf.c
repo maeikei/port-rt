@@ -1,5 +1,5 @@
 #include <complex.h>
-float  __attribute__ ((const)) cargf (float _Complex _Z)
+float  __attribute__ ((const)) CLANG_PORT_DECL(cargf) (float _Complex _Z)
 {
   float res;
   __asm__ ("fpatan;"

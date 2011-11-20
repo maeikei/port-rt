@@ -9,7 +9,7 @@
 #include <math.h>
 #include <complex.h>
 
-long double complex cpowl (long double complex X, long double complex Y)
+long double complex CLANG_PORT_DECL(cpowl) (long double complex X, long double complex Y)
 {
   long double complex Res;
   long double i;

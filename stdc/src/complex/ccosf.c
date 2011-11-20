@@ -11,7 +11,7 @@
     + I * (sin (x) * sinh (y)) */ 
 
 
-float complex ccosf (float complex Z)
+float complex CLANG_PORT_DECL(ccosf) (float complex Z)
 {
   float complex Res;
   __real__ Res = cosf (__real__ Z) * coshf ( __imag__ Z);

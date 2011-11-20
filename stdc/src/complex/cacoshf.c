@@ -28,7 +28,7 @@ float complex cacosh (float complex Z)
 
 /* cacosh (z) = I * cacos (z) = I * (pi/2 - casin (z))  */
 
-float complex cacoshf (float complex Z)
+float complex CLANG_PORT_DECL(cacoshf) (float complex Z)
 {
   float complex Tmp;
   float complex Res;

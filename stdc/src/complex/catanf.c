@@ -19,7 +19,7 @@
 /* catan (z) = -I/2 * clog ((I + z) / (I - z)) */ 
 
 float complex 
-catanf (float complex Z)
+CLANG_PORT_DECL(catanf) (float complex Z)
 {
   float complex Res;
   float complex Tmp;

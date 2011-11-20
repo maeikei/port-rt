@@ -7,7 +7,7 @@
 #include <math.h>
 #include <complex.h>
 
-long double complex  csqrtl (long double complex Z)
+long double complex  CLANG_PORT_DECL(csqrtl) (long double complex Z)
 {
   long double complex Res;
   long double r;

@@ -58,7 +58,7 @@ float complex cacos (float  complex Z)
 
 /* cacos ( Z ) =  pi/2 - casin ( Z ) */
 
-float complex cacosf (float complex Z)
+float complex CLANG_PORT_DECL(cacosf) (float complex Z)
 {
   float complex Res  = casinf (Z);
   __real__ Res = M_PI_2 - __real__ Res;

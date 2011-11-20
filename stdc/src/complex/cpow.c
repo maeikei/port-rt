@@ -13,7 +13,7 @@
 extern double  (*_imp__pow) (double, double);
 #define pow (*_imp__pow)
 
-double complex cpow (double complex X, double complex Y)
+double complex CLANG_PORT_DECL(cpow) (double complex X, double complex Y)
 {
   double complex Res;
   double i;

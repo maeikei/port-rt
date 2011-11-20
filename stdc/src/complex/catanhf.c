@@ -9,7 +9,7 @@
 
 /*  catanh (z) = -I * catan (I  * z)  */
 
-float complex catanhf (float complex Z)
+float complex CLANG_PORT_DECL(catanhf) (float complex Z)
 {
   float complex Tmp;
   float complex Res;

@@ -11,7 +11,7 @@
 /* csin (x + I * y) = sin (x) * cosh (y)
     + I * (cos (x) * sinh (y)) */ 
 
-float complex csinf (float complex Z)
+float complex CLANG_PORT_DECL(csinf) (float complex Z)
 {
   float complex Res;
   __real__ Res = sinf (__real__ Z) * coshf ( __imag__ Z);

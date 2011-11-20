@@ -10,7 +10,7 @@
 /* ccosh (x + I * y) = cosh (x) * cos (y)
     + I * (sinh (x) * sin (y)) */ 
 
-float complex ccoshf (float complex Z)
+float complex CLANG_PORT_DECL(ccoshf) (float complex Z)
 {
   float complex Res;
   __real__ Res = coshf (__real__ Z) * cosf (__imag__ Z);

@@ -28,7 +28,7 @@ double complex cacosh (double complex Z)
 
 /* cacosh (z) = I * cacos (z) = I * (pi/2 - casin (z))  */
 
-double complex cacosh (double complex Z)
+double complex CLANG_PORT_DECL(cacosh) (double complex Z)
 {
   double complex Tmp;
   double complex Res;
