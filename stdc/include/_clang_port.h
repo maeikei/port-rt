@@ -39,7 +39,7 @@
 #define CLANG_LIB_BUILTIN 
 
 
-#define CLANG_STRUCT(x) ( * __clang_port_struct_type_##x )
+#define CLANG_SELF_TYPE(x) __clang_port_self_type_##x
 
 
 

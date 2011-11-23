@@ -30,7 +30,7 @@
 __BEGIN_DECLS
 
 
-typedef unsigned short CLANG_STRUCT(fexcept_t);
+typedef unsigned short CLANG_SELF_TYPE(fexcept_t);
 
 typedef struct
 {
@@ -47,25 +47,25 @@ typedef struct
 	unsigned short __data_selector;
 	unsigned short  __unused3;
 	unsigned int __mxcsr; /* contents of the MXCSR register  */
-} CLANG_STRUCT(fenv_t);
+} CLANG_SELF_TYPE(fenv_t);
 
 extern int CLANG_PORT_DECL(feclearexcept)(int excepts);
-extern int CLANG_PORT_DECL(fegetexceptflag)(fexcept_t *flagp, int excepts);
+extern int CLANG_PORT_DECL(fegetexceptflag)(CLANG_SELF_TYPE(fexcept_t) *flagp, int excepts);
 extern int CLANG_PORT_DECL(feraiseexcept)(int excepts);
-extern int CLANG_PORT_DECL(fesetexceptflag)(const fexcept_t *flagp, int excepts);
+extern int CLANG_PORT_DECL(fesetexceptflag)(const CLANG_SELF_TYPE(fexcept_t) *flagp, int excepts);
 extern int CLANG_PORT_DECL(fetestexcept)(int excepts);
 extern int CLANG_PORT_DECL(fegetround)(void);
 extern int CLANG_PORT_DECL(fesetround)(int round);
-extern int CLANG_PORT_DECL(fegetenv)(fenv_t *envp);
-extern int CLANG_PORT_DECL(feholdexcept)(fenv_t *envp);
-extern int CLANG_PORT_DECL(fesetenv)(const fenv_t *envp);
-extern int CLANG_PORT_DECL(feupdateenv)(const fenv_t *envp);
+extern int CLANG_PORT_DECL(fegetenv)(CLANG_SELF_TYPE(fenv_t) *envp);
+extern int CLANG_PORT_DECL(feholdexcept)(CLANG_SELF_TYPE(fenv_t) *envp);
+extern int CLANG_PORT_DECL(fesetenv)(const CLANG_SELF_TYPE(fenv_t) *envp);
+extern int CLANG_PORT_DECL(feupdateenv)(const CLANG_SELF_TYPE(fenv_t) *envp);
 
 
 
 #ifndef __IMPL_CLANG_PORT_API__
-typedef CLANG_STRUCT(fexcept_t) fexcept_t;
-typedef CLANG_STRUCT(fenv_t) fenv_t;
+typedef CLANG_SELF_TYPE(fexcept_t) fexcept_t;
+typedef CLANG_SELF_TYPE(fenv_t) fenv_t;
 
 
 	
@@ -78,7 +78,7 @@ CLANG_PORT_INLINE int feclearexcept(int excepts)
 }
 CLANG_PORT_INLINE int fegetexceptflag(fexcept_t *flagp, int excepts)
 {
-	return CLANG_PORT_CALL(fegetexceptflag)(excepts);
+	return CLANG_PORT_CALL(fegetexceptflag)(flagp,excepts);
 }
 CLANG_PORT_INLINE int feraiseexcept(int excepts)
 {
@@ -86,7 +86,7 @@ CLANG_PORT_INLINE int feraiseexcept(int excepts)
 }
 CLANG_PORT_INLINE int fesetexceptflag(const fexcept_t *flagp, int excepts)
 {
-	return CLANG_PORT_CALL(fesetexceptflag)(excepts);
+	return CLANG_PORT_CALL(fesetexceptflag)(flagp,excepts);
 }
 CLANG_PORT_INLINE int fetestexcept(int excepts)
 {
