@@ -6,12 +6,22 @@
 #ifndef _CLANG_PORT_WCTYPE_H_
 #define _CLANG_PORT_WCTYPE_H_
 
-#include <_clang_port.h>
 
+
+#ifdef __IMPL_CLANG_PORT_API__
+#include <stdc/include/_clang_port.h>
+#include <stdc/include/wchar.h>
+#include <stdc/include/stddef.h>
+#include <stdc/include/stdarg.h>
+#include <stdc/include/time.h>
+#else // __IMPL_CLANG_PORT_API__
+#include <_clang_port.h>
 #include <wchar.h>
 #include <stddef.h>
 #include <stdarg.h>
 #include <time.h>
+#endif // __IMPL_CLANG_PORT_API__
+
 
 __BEGIN_DECLS
 

@@ -1,4 +1,6 @@
-include_directories(${CMAKE_SOURCE_DIR}/stdc/include)
+set(CMAKE_C_FLAGS "")
+add_definitions(-D__IMPL_CLANG_PORT_API__)
+include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/stdc/src/include)
 
 aux_source_directory(misc MISC_SOURCES)

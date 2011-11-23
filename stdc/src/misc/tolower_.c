@@ -5,8 +5,8 @@
  */
 
 #define _ANSI_LIBRARY
-#include <ctype.h>
-#include <stdio.h>
+#include <stdc/include/ctype.h>
+#include <stdc/include/stdio.h>
 #include "ctype_private.h"
 
 const short _C_tolower_[1 + CTYPE_NUM_CHARS] = {

@@ -6,7 +6,11 @@
 #ifndef _CLANG_PORT_CTYPE_H_
 #define _CLANG_PORT_CTYPE_H_
 
+#ifdef __IMPL_CLANG_PORT_API__
+#include <stdc/include/_clang_port.h>
+#else // __IMPL_CLANG_PORT_API__
 #include <_clang_port.h>
+#endif // __IMPL_CLANG_PORT_API__
 
 #define	_U	0x01
 #define	_L	0x02

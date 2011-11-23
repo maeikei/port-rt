@@ -6,11 +6,22 @@
 #ifndef	_CLANG_PORT_WCHAR_H_
 #define	_CLANG_PORT_WCHAR_H_
 
+
+#ifdef __IMPL_CLANG_PORT_API__
+#include <stdc/include/_clang_port.h>
+#include <stdc/include/stdio.h>
+#include <stdc/include/stddef.h>
+#include <stdc/include/stdarg.h>
+#include <stdc/include/time.h>
+#else // __IMPL_CLANG_PORT_API__
 #include <_clang_port.h>
 #include <stdio.h>
 #include <stddef.h>
 #include <stdarg.h>
 #include <time.h>
+#endif // __IMPL_CLANG_PORT_API__
+
+
 
 typedef int                     wint_t;
 typedef struct { int  dummy; }  mbstate_t;

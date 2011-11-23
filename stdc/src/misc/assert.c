@@ -2,9 +2,9 @@
  * assert.c
  *
  */
-#include <assert.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdc/include/assert.h>
+#include <stdc/include/stdio.h>
+#include <stdc/include/stdlib.h>
 
 void
 CLANG_PORT_DECL(assert)(const char *file, int line, const char *func, const char *failedexpr)

@@ -7,9 +7,15 @@
 #ifndef _CLANG_PORT_THREADS_H_
 #define _CLANG_PORT_THREADS_H_
 
+#ifdef __IMPL_CLANG_PORT_API__
+#include <stdc/include/_clang_port.h>
+#include <stdc/include/time.h>
+#include <stdc/include/stdnoreturn.h>
+#else // __IMPL_CLANG_PORT_API__
 #include <_clang_port.h>
 #include <time.h>
 #include <stdnoreturn.h>
+#endif // __IMPL_CLANG_PORT_API__
 
 
 #ifdef __STDC_NO_THREADS__

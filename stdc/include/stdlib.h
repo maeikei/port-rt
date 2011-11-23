@@ -6,8 +6,13 @@
 #ifndef _CLANG_PORT_STDLIB_H_
 #define _CLANG_PORT_STDLIB_H_
 
+#ifdef __IMPL_CLANG_PORT_API__
+#include <stdc/include/_clang_port.h>
+#include <stdc/include/stddef.h>
+#else // __IMPL_CLANG_PORT_API__
 #include <_clang_port.h>
 #include <stddef.h>
+#endif // __IMPL_CLANG_PORT_API__
 
 #define EXIT_FAILURE 1
 #define EXIT_SUCCESS 0

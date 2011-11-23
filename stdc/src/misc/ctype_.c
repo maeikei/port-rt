@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  */
 
-#include <ctype.h>
+#include <stdc/include/ctype.h>
 #include "ctype_private.h"
 
 const char _C_ctype_[1 + CTYPE_NUM_CHARS] = {

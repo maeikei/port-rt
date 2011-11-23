@@ -25,7 +25,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include <errno.h>
+#include <stdc/include/errno.h>
 // #include <bionic_tls.h>
 static int ___errno = 0; 
 
