@@ -34,7 +34,7 @@
 #define CLANG_PORT_FPTR_VAR(x) __clang_port_func_ptr_type_##x __clang_port_func_ptr_var_##x
 #define CLANG_PORT_CALL_FPTR(x) __clang_port_func_ptr_var_##x
 #define CLANG_BUILTIN_CALL(x) __builtin_##x
-#define CLANG_PORT_INLINE static inline 
+#define CLANG_PORT_INLINE static __inline
 #define CLANG_PORT_ALWAYS_INLINE __attribute__((__always_inline__, __nodebug__)) 
 #define CLANG_LIB_BUILTIN 
 
