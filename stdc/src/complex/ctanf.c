@@ -5,9 +5,9 @@
    2004-12-24
 */
 
-#include <math.h>
-#include <complex.h>
-#include <errno.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
+#include <stdc/include/errno.h>
 
 
 

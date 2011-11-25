@@ -4,8 +4,8 @@
    2003-10-20
 */
 
-#include <math.h>
-#include <complex.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
 
 
 #include <math_internal.h>

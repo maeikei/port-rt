@@ -6,8 +6,8 @@
 
 /* clog (x + I * y) = log (hypot (x, y)) + I * atan2 (y, x) */
 
-#include <math.h>
-#include <complex.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
 
 long double complex CLANG_PORT_DECL(clogl) (long double complex Z)
 {

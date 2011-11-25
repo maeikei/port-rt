@@ -4,8 +4,8 @@
    2005-01-04
 */
 
-#include <math.h>
-#include <complex.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
 
 long double complex  CLANG_PORT_DECL(csqrtl) (long double complex Z)
 {

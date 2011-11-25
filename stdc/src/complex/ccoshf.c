@@ -4,8 +4,8 @@
    2004-12-24
 */
 
-#include <math.h>
-#include <complex.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
 
 /* ccosh (x + I * y) = cosh (x) * cos (y)
     + I * (sinh (x) * sin (y)) */ 

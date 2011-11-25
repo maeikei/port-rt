@@ -6,8 +6,8 @@
 
 /* cpow(X, Y) = cexp(X * clog(Y)) */
 
-#include <math.h>
-#include <complex.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
 
 /* Use dll version of pow */
 extern double  (*_imp__pow) (double, double);

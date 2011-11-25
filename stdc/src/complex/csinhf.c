@@ -5,8 +5,8 @@
 */
 
 
-#include <math.h>
-#include <complex.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
 
 /* csinh (x + I * y) = sinh (x) * cos (y)
     + I * (cosh (x) * sin (y)) */ 

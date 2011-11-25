@@ -6,8 +6,8 @@
 
 /* cpow(X, Y) = cexp(X * clog(Y)) */
 
-#include <math.h>
-#include <complex.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
 
 long double complex CLANG_PORT_DECL(cpowl) (long double complex X, long double complex Y)
 {

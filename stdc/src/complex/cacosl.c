@@ -4,8 +4,8 @@
    2004-01-04
 */
 
-#include <math.h>
-#include <complex.h>
+#include <stdc/include/math.h>
+#include <stdc/include/complex.h>
 
 #if 0
 /* cacos (Z) = -I * clog(Z + I * csqrt(1 - Z * Z)) */
