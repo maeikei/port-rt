@@ -14,6 +14,7 @@
 
 
 
+#ifndef __IMPL_CLANG_PORT_API__
 /* FPU status word exception flags */
 #define FE_INVALID	0x01
 #define FE_DENORMAL	0x02
@@ -29,6 +30,11 @@
 #define FE_DOWNWARD	0x0400
 #define FE_UPWARD	0x0800
 #define FE_TOWARDZERO	0x0c00
+
+#endif // __IMPL_CLANG_PORT_API__
+
+
+
 
 
 __BEGIN_DECLS
