@@ -13,11 +13,9 @@
 #endif // __IMPL_CLANG_PORT_API__
 
 
-__BEGIN_DECLS
 
-typedef int sig_atomic_t;
 	
-
+#ifndef __IMPL_CLANG_PORT_API__
 #define SIG_DFL 0
 #define SIG_ERR 1
 #define SIG_IGN 2
@@ -27,14 +25,35 @@ typedef int sig_atomic_t;
 #define SIGINT 6
 #define SIGSEGV 7
 #define SIGTERM 8
+#endif // __IMPL_CLANG_PORT_API__
 
-typedef void (*sig_handler)(int) ;
+typedef int CLANG_SELF_TYPE(sig_atomic_t);
+typedef void (*CLANG_SELF_TYPE(sig_handler))(int) ;
 
+
+#ifndef __IMPL_CLANG_PORT_API__
+typedef CLANG_SELF_TYPE(sig_atomic_t) sig_atomic_t;
+typedef CLANG_SELF_TYPE(sig_handler) sig_handler;
+#endif // __IMPL_CLANG_PORT_API__
+
+__BEGIN_DECLS
 /*
  Specify signal handling
  */
-void signal(int sig, sig_handler handler );
-int raise(int sig);
+void CLANG_PORT_DECL(signal)(int sig, CLANG_SELF_TYPE(sig_handler) handler );
+int CLANG_PORT_DECL(raise)(int sig);
+
+#ifndef __IMPL_CLANG_PORT_API__
+CLANG_PORT_INLINE void signal(int sig, sig_handler handler )
+{
+	CLANG_PORT_CALL(signal)(sig,handler);
+}
+CLANG_PORT_INLINE int raise(int sig)
+{
+	return CLANG_PORT_CALL(raise)(sig);
+}
+#endif // __IMPL_CLANG_PORT_API__
+
 
 __END_DECLS
 

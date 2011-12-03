@@ -13,21 +13,31 @@
 #endif // __IMPL_CLANG_PORT_API__
 
 
-typedef long sigjmp_buf[_JBLEN + 1];
-typedef long jmp_buf[_JBLEN];
+typedef long CLANG_SELF_TYPE(jmp_buf)[64];
+
+#ifndef __IMPL_CLANG_PORT_API__
+typedef CLANG_SELF_TYPE(jmp_buf) jmp_buf;
+#endif // __IMPL_CLANG_PORT_API__
 
 
 __BEGIN_DECLS
 
-int     _setjmp(jmp_buf);
-void    _longjmp(jmp_buf, int);
-void    longjmperror(void);
 
-int     setjmp(jmp_buf);
-void    longjmp(jmp_buf, int);
+int CLANG_PORT_DECL(setjmp)(CLANG_SELF_TYPE(jmp_buf) j);
+void CLANG_PORT_DECL(longjmp)(CLANG_SELF_TYPE(jmp_buf) j, int offset);
 
-int     sigsetjmp(sigjmp_buf, int);
-void    siglongjmp(sigjmp_buf, int);
+
+#ifndef __IMPL_CLANG_PORT_API__
+CLANG_PORT_INLINE int setjmp(jmp_buf j)
+{
+	return CLANG_PORT_CALL(setjmp)(j);
+}
+CLANG_PORT_INLINE void longjmp(jmp_buf j, int offset);
+{
+	CLANG_PORT_CALL(longjmp)(j,offset);
+}
+#endif // __IMPL_CLANG_PORT_API__
+
 
 __END_DECLS
 
