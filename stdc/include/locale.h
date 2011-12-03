@@ -17,6 +17,9 @@
 
 __BEGIN_DECLS
 
+
+#ifndef __IMPL_CLANG_PORT_API__
+
 enum {
     LC_CTYPE     = 0,
     LC_NUMERIC   = 1,
@@ -33,8 +36,21 @@ enum {
     LC_MEASUREMENT    = 11,
     LC_IDENTIFICATION = 12
 };
+#endif // __IMPL_CLANG_PORT_API__
 
-extern char *setlocale(int category, const char *locale);
+
+
+extern char * CLANG_PORT_DECL(setlocale)(int category, const char *locale);
+
+
+#ifndef __IMPL_CLANG_PORT_API__
+CLANG_PORT_INLINE char *setlocale(int category, const char *locale)
+{
+	return CLANG_PORT_CALL(setlocale)(category,locale);
+}
+#endif // __IMPL_CLANG_PORT_API__
+
+
 
 __END_DECLS
 
