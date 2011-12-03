@@ -152,6 +152,9 @@ typedef	struct __sFILE {
 
 __BEGIN_DECLS
 
+
+
+
 extern FILE __sF[];
 
 
