@@ -19,7 +19,7 @@ long double complex CLANG_PORT_DECL(casinl) (long double complex Z)
 
   if (y == 0.0L)
     {
-      __real__ Res = asinl (x);
+      __real__ Res = CLANG_PORT_CALL(asinl) (x);
       __imag__ Res = 0.0L;
     }
   else  /* -I * clog(I * Z + csqrt(1.0 - Z * Z))) */
@@ -30,7 +30,7 @@ long double complex CLANG_PORT_DECL(casinl) (long double complex Z)
       /* calculate 1 - Z * Z */
       __real__ ZZ = 1.0L - (x - y) * (x + y);
       __imag__ ZZ = -2.0L * x * y;
-      ZZ = csqrtl (ZZ);
+      ZZ = CLANG_PORT_CALL(csqrtl) (ZZ);
 
 
       /* add  I * Z  to ZZ */
@@ -38,7 +38,7 @@ long double complex CLANG_PORT_DECL(casinl) (long double complex Z)
       __real__ ZZ -= y;
       __imag__ ZZ += x;
 
-      ZZ = clogl (ZZ);
+      ZZ = CLANG_PORT_CALL(clogl) (ZZ);
 
       /* mult by -I */
       __real__ Res = __imag__ ZZ;

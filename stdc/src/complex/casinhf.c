@@ -16,7 +16,7 @@ float complex CLANG_PORT_DECL(casinhf) (float complex Z)
 
   __real__ Tmp = - __imag__ Z;
   __imag__ Tmp =   __real__ Z;
-  Tmp = casinf (Tmp);
+  Tmp = CLANG_PORT_CALL(casinf) (Tmp);
   __real__ Res =   __imag__ Tmp;
   __imag__ Res = - __real__ Tmp;
   return Res;

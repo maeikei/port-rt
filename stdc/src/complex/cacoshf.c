@@ -33,7 +33,7 @@ float complex CLANG_PORT_DECL(cacoshf) (float complex Z)
   float complex Tmp;
   float complex Res;
 
-  Tmp = casinf (Z);
+  Tmp = CLANG_PORT_CALL(casinf) (Z);
   __real__ Res = __imag__ Tmp;
   __imag__ Res =  M_PI_2 - __real__ Tmp;
   return Res;

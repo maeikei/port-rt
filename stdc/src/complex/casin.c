@@ -19,7 +19,7 @@ double complex CLANG_PORT_DECL(casin) (double complex Z)
 
   if (y == 0.0)
     {
-      __real__ Res = asin (x);
+      __real__ Res = CLANG_PORT_CALL(asin) (x);
       __imag__ Res = 0.0;
     }
   else  /* -I * clog(I * Z + csqrt(1.0 - Z * Z))) */
@@ -30,7 +30,7 @@ double complex CLANG_PORT_DECL(casin) (double complex Z)
       /* calculate 1 - Z * Z */
       __real__ ZZ = 1.0 - (x - y) * (x + y);
       __imag__ ZZ = -2.0 * x * y;
-      ZZ = csqrt (ZZ);
+      ZZ = CLANG_PORT_CALL(csqrt) (ZZ);
 
 
       /* add  I * Z  to ZZ */
@@ -38,7 +38,7 @@ double complex CLANG_PORT_DECL(casin) (double complex Z)
       __real__ ZZ -= y;
       __imag__ ZZ += x;
 
-      ZZ = clog (ZZ);
+      ZZ = CLANG_PORT_CALL(clog) (ZZ);
 
       /* mult by -I */
       __real__ Res = __imag__ ZZ;

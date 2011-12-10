@@ -29,7 +29,7 @@
 
 size_t  CLANG_PORT_DECL(strnlen)(const char*  str, size_t  maxlen)
 {
-    char*  p = memchr(str, 0, maxlen);
+    char*  p = CLANG_PORT_CALL(memchr)(str, 0, maxlen);
 
     if (p == NULL)
         return maxlen;

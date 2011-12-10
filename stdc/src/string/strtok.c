@@ -39,7 +39,7 @@ CLANG_PORT_DECL(strtok)(char *s, const char *delim)
 {
 	static char *last;
 
-	return strtok_r(s, delim, &last);
+	return CLANG_PORT_CALL(strtok_r)(s, delim, &last);
 }
 
 char *

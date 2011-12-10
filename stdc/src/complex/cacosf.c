@@ -60,7 +60,7 @@ float complex cacos (float  complex Z)
 
 float complex CLANG_PORT_DECL(cacosf) (float complex Z)
 {
-  float complex Res  = casinf (Z);
+  float complex Res  = CLANG_PORT_CALL(casinf) (Z);
   __real__ Res = M_PI_2 - __real__ Res;
   __imag__ Res = - __imag__ Res;
   return Res;

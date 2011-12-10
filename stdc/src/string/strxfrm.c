@@ -38,10 +38,10 @@
 size_t
 CLANG_PORT_DECL(strxfrm)(char *s1, const char *s2, size_t n)
 {
-	size_t len = strlen(s2) + 1;
+	size_t len = CLANG_PORT_CALL(strlen)(s2) + 1;
 
 	if (len < n)
 		n = len;
-	memcpy(s1, s2, n);
+	CLANG_PORT_CALL(memcpy)(s1, s2, n);
 	return len;
 }

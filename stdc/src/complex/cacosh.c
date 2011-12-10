@@ -33,7 +33,7 @@ double complex CLANG_PORT_DECL(cacosh) (double complex Z)
   double complex Tmp;
   double complex Res;
 
-  Tmp = casin (Z);
+  Tmp = CLANG_PORT_CALL(casin) (Z);
   __real__ Res = __imag__ Tmp;
   __imag__ Res =  M_PI_2 - __real__ Tmp;
   return Res;

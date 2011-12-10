@@ -19,7 +19,7 @@ float complex CLANG_PORT_DECL(casinf) (float complex Z)
 
   if (y == 0.0f)
     {
-      __real__ Res = asinf (x);
+      __real__ Res = CLANG_PORT_CALL(asinf) (x);
       __imag__ Res = 0.0f;
     }
   else  /* -I * clog(I * Z + csqrt(1.0 - Z * Z))) */
@@ -30,7 +30,7 @@ float complex CLANG_PORT_DECL(casinf) (float complex Z)
       /* calculate 1 - Z * Z */
       __real__ ZZ = 1.0f - (x - y) * (x + y);
       __imag__ ZZ = -2.0f * x * y;
-      ZZ = csqrtf (ZZ);
+      ZZ = CLANG_PORT_CALL(csqrtf) (ZZ);
 
 
       /* add  I * Z  to ZZ */
@@ -38,7 +38,7 @@ float complex CLANG_PORT_DECL(casinf) (float complex Z)
       __real__ ZZ -= y;
       __imag__ ZZ += x;
 
-      ZZ = clogf (ZZ);
+      ZZ = CLANG_PORT_CALL(clogf) (ZZ);
 
       /* mult by -I */
       __real__ Res = __imag__ ZZ;

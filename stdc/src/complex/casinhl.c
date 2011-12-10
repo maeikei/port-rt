@@ -16,7 +16,7 @@ long double complex CLANG_PORT_DECL(casinhl) (long double complex Z)
 
   __real__ Tmp = - __imag__ Z;
   __imag__ Tmp =   __real__ Z;
-  Tmp = casinl (Tmp);
+  Tmp = CLANG_PORT_CALL(casinl) (Tmp);
   __real__ Res =   __imag__ Tmp;
   __imag__ Res = - __real__ Tmp;
   return Res;

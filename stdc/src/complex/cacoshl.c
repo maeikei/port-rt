@@ -14,7 +14,7 @@ long double complex cacoshl (long double complex Z)
   long double complex Tmp;
   long double complex Res;
 
-  Tmp = cacosl (Z);
+  Tmp = CLANG_PORT_CALL(cacosl) (Z);
   __real__ Res = -__imag__ Tmp;
   __imag__ Res = __real__ Tmp;
   return Res;
@@ -31,7 +31,7 @@ long double complex CLANG_PORT_DECL(cacoshl) (long double complex Z)
   long double complex Tmp;
   long double complex Res;
 
-  Tmp = casinl (Z);
+  Tmp = CLANG_PORT_CALL(casinl) (Z);
   __real__ Res = __imag__ Tmp;
   __imag__ Res =  _M_PI_2L - __real__ Tmp;
   return Res;

@@ -43,13 +43,13 @@ CLANG_PORT_DECL(strstr)(const char *s, const char *find)
 	size_t len;
 
 	if ((c = *find++) != 0) {
-		len = strlen(find);
+		len = CLANG_PORT_CALL(strlen)(find);
 		do {
 			do {
 				if ((sc = *s++) == 0)
 					return (NULL);
 			} while (sc != c);
-		} while (strncmp(s, find, len) != 0);
+		} while (CLANG_PORT_CALL(strncmp)(s, find, len) != 0);
 		s--;
 	}
 	return ((char *)s);

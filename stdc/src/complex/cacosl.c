@@ -20,7 +20,7 @@ long double complex cacosl (long double  complex Z)
 
   if (y == 0.0L)
     {
-      __real__ Res = acosl (x);
+      __real__ Res = CLANG_PORT_CALL(acosl) (x);
       __imag__ Res = 0.0L;
     }
 
@@ -33,14 +33,14 @@ long double complex cacosl (long double  complex Z)
       __imag__ ZZ = -2.0L * x * y;
 
        
-       Res = csqrtl(ZZ);
+       Res = CLANG_PORT_CALL(csqrtl)(ZZ);
 
       /* calculate ZZ + I * sqrt (ZZ) */
     
       __real__ ZZ = x - __imag__ Res;
       __imag__ ZZ = y + __real__ Res;
        
-      ZZ = clogl(ZZ);
+      ZZ = CLANG_PORT_CALL(clogl)(ZZ);
 
       /* mult by -I */
 

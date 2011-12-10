@@ -30,12 +30,12 @@
 
 char*  CLANG_PORT_DECL(strndup)(const char*  s, size_t n)
 {
-    size_t  slen = (size_t)strlen(s);
+    size_t  slen = (size_t)CLANG_PORT_CALL(strlen)(s);
     char*   copy;
 
     if (slen < n)
         n = slen;
-    copy = malloc(n+1);
+    copy = CLANG_PORT_CALL(malloc)(n+1);
     if (copy) {
         memcpy(copy, s, n);
         copy[n] = 0;

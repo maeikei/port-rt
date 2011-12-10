@@ -59,7 +59,7 @@ double complex cacos (double  complex Z)
 
 double complex CLANG_PORT_DECL(cacos) (double complex Z)
 {
-  double complex Res  = casin (Z);
+  double complex Res  = CLANG_PORT_CALL(casin) (Z);
   __real__ Res = M_PI_2 - __real__ Res;
   __imag__ Res = - __imag__ Res;
   return Res;
