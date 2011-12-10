@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  */
 
-#include <string.h>
+#include <stdc/include/string.h>
 
 typedef unsigned char u_char;
 
