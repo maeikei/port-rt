@@ -28,8 +28,8 @@
  * SUCH DAMAGE.
  */
 
-#include <string.h>
-#include <limits.h>
+#include <stdc/include/string.h>
+#include <stdc/include/limits.h>
 
 char *
 strerror(int num)

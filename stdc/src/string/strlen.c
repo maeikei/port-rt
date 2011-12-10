@@ -29,11 +29,7 @@
  * SUCH DAMAGE.
  */
 
-#if !defined(_KERNEL) && !defined(_STANDALONE)
-#include <string.h>
-#else
-#include <lib/libkern/libkern.h>
-#endif
+#include <stdc/include/string.h>
 
 size_t
 strlen(const char *str)

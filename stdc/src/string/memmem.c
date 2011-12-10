@@ -30,7 +30,7 @@
  * usually effective algorithm, see:
  * http://www-igm.univ-mlv.fr/~lecroq/string/
  */
-#include <string.h>
+#include <stdc/include/string.h>
 
 void *memmem(const void *haystack, size_t n, const void *needle, size_t m)
 {

@@ -25,11 +25,12 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include <ctype.h>
-#include <inttypes.h>
-#include <stdlib.h>
-#include <sys/time.h>
+#include <stdc/include/ctype.h>
+#include <stdc/include/inttypes.h>
+#include <stdc/include/stdlib.h>
+//#include <sys/time.h>
 
+#if 0
 char * strtotimeval (const char *str, struct timeval *ts)
 {
     int n;
@@ -61,3 +62,4 @@ char * strtotimeval (const char *str, struct timeval *ts)
     ts->tv_usec = fs;
     return s;
 }
+#endif

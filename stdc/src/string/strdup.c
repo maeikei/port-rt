@@ -29,11 +29,11 @@
  * SUCH DAMAGE.
  */
 
-#include <sys/types.h>
+//#include <sys/types.h>
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdc/include/stddef.h>
+#include <stdc/include/stdlib.h>
+#include <stdc/include/string.h>
 
 char *
 strdup(const char *str)

@@ -27,7 +27,12 @@
  * SUCH DAMAGE.
  */
 
-#include <string.h>
+#include <stdc/include/string.h>
+
+
+char *
+strtok_r(char *s, const char *delim, char **last);
+
 
 char *
 strtok(char *s, const char *delim)

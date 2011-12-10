@@ -32,11 +32,7 @@
  * SUCH DAMAGE.
  */
 
-#if !defined(_KERNEL) && !defined(_STANDALONE)
-#include <string.h>
-#else
-#include <lib/libkern/libkern.h>
-#endif
+#include <stdc/include/string.h>
 
 /*
  * Copy src to dst, truncating or null-padding to always copy n bytes.

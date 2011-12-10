@@ -25,8 +25,8 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include <stddef.h>
-#include <string.h>
+#include <stdc/include/stddef.h>
+#include <stdc/include/string.h>
 
 void *memrchr(const void *s, int c, size_t n)
 {

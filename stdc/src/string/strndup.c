@@ -25,8 +25,8 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include <string.h>
-#include <stdlib.h>
+#include <stdc/include/string.h>
+#include <stdc/include/stdlib.h>
 
 char*  strndup(const char*  s, size_t n)
 {

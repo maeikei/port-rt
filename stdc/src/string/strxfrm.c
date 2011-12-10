@@ -25,7 +25,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include <string.h>
+#include <stdc/include/string.h>
 
 /*
  * Transform string s2 to string s1 using the current locale so that

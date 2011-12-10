@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  */
 
-#include <string.h>
+#include <stdc/include/string.h>
 
 /*
  * Find the first occurrence in s1 of a character in s2 (excluding NUL).

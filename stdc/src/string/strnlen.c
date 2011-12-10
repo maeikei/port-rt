@@ -25,7 +25,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include <string.h>
+#include <stdc/include/string.h>
 
 size_t  strnlen(const char*  str, size_t  maxlen)
 {

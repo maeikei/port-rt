@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  */
 
-#include <string.h>
+#include <stdc/include/string.h>
 
 /*
  * Find the first occurrence of find in s.

@@ -3,10 +3,10 @@
 
 #define sys_siglist	_sys_siglist
 
-#include <errno.h>
-#include <limits.h>
-#include <signal.h>
-#include <string.h>
+#include <stdc/include/errno.h>
+#include <stdc/include/limits.h>
+#include <stdc/include/signal.h>
+#include <stdc/include/string.h>
 
 typedef struct {
   int           code;

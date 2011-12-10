@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  */
 
-#include <string.h>
+#include <stdc/include/string.h>
 
 char *
 index(const char *p, int ch)

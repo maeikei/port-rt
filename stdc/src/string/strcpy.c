@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  */
 
-#include <string.h>
+#include <stdc/include/string.h>
 
 char *
 strcpy(char *to, const char *from)
