@@ -9,6 +9,7 @@ aux_source_directory(stdio STDIO_SOURCES)
 aux_source_directory(stdlib STDLIB_SOURCES)
 aux_source_directory(fenv FENV_SOURCES)
 aux_source_directory(unistd UNISTD_SOURCES)
+aux_source_directory(string STRING_SOURCES)
 
 add_library_static(c
 	${MISC_SOURCES}
@@ -17,4 +18,5 @@ add_library_static(c
 	${STDLIB_SOURCES}
 	${FENV_SOURCES}
 	${UNISTD_SOURCES}
+	${STRING_SOURCES}
 )
