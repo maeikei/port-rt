@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  */
 
-#include <string.h>
+#include <stdc/include/string.h>
 
 /*
  * Concatenate src on the end of dst.  At most strlen(dst)+n+1 bytes
