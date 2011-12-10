@@ -25,7 +25,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include <string.h>
+#include <stdc/include/string.h>
 
 /*
  * Compare strings using the current locale.  Since Bionic really does not
