@@ -31,7 +31,7 @@
 #include <stdc/include/string.h>
 
 char *
-strchr(const char *p, int ch)
+CLANG_PORT_DECL(strchr)(const char *p, int ch)
 {
 	for (;; ++p) {
 		if (*p == ch)

@@ -36,7 +36,7 @@
 #include <stdc/include/string.h>
 
 char *
-strdup(const char *str)
+CLANG_PORT_DECL(strdup)(const char *str)
 {
 	size_t siz;
 	char *copy;

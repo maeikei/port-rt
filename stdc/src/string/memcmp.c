@@ -27,7 +27,7 @@
  */
 #include <stdc/include/string.h>
 
-int memcmp(const void *s1, const void *s2, size_t n)
+int CLANG_PORT_DECL(memcmp)(const void *s1, const void *s2, size_t n)
 {
     const unsigned char*  p1   = s1;
     const unsigned char*  end1 = p1 + n;

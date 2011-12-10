@@ -32,7 +32,7 @@
 #include <stdc/include/limits.h>
 
 char *
-strerror(int num)
+CLANG_PORT_DECL(strerror)(int num)
 {
 	static char buf[256];
 

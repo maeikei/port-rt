@@ -28,7 +28,7 @@
 #include <stdc/include/stddef.h>
 #include <stdc/include/string.h>
 
-void *memccpy(void *dst, const void *src, int c, size_t n)
+void *CLANG_PORT_DECL(memccpy)(void *dst, const void *src, int c, size_t n)
 {
     char*        q     = dst;
     const char*  p     = src;

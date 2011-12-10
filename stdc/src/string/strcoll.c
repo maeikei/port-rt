@@ -34,7 +34,7 @@
  * This function is provided to make libstdc++-v3 usable.
  */
 int
-strcoll(const char *s1, const char *s2)
+CLANG_PORT_DECL(strcoll)(const char *s1, const char *s2)
 {
 	return strcmp(s1, s2);
 }

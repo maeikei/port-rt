@@ -28,7 +28,7 @@
 #include <stdc/include/string.h>
 //#include <strings.h>
 
-void *memmove(void *dst, const void *src, size_t n)
+void *CLANG_PORT_DECL(memmove)(void *dst, const void *src, size_t n)
 {
   const char *p = src;
   char *q = dst;

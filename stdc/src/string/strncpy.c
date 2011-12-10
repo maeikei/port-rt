@@ -39,7 +39,7 @@
  * Return dst.
  */
 char *
-strncpy(char *dst, const char *src, size_t n)
+CLANG_PORT_DECL(strncpy)(char *dst, const char *src, size_t n)
 {
 	if (n != 0) {
 		char *d = dst;

@@ -38,7 +38,7 @@
  * Compare strings.
  */
 int
-strcmp(const char *s1, const char *s2)
+CLANG_PORT_DECL(strcmp)(const char *s1, const char *s2)
 {
 	while (*s1 == *s2++)
 		if (*s1++ == 0)

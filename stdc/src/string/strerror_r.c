@@ -90,7 +90,7 @@ __itoa(int num, int sign, char *buffer, size_t start, size_t end)
 
 
 int
-strerror_r(int errnum, char *strerrbuf, size_t buflen)
+CLANG_PORT_DECL(strerror_r)(int errnum, char *strerrbuf, size_t buflen)
 {
     int          save_errno;
     int          len, ret = 0;

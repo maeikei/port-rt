@@ -28,7 +28,7 @@
 #include <stdc/include/string.h>
 #include <stdc/include/stdint.h>
 
-void*  memset(void*  dst, int c, size_t n)
+void*  CLANG_PORT_DECL(memset)(void*  dst, int c, size_t n)
 {
     char*  q   = dst;
     char*  end = q + n;

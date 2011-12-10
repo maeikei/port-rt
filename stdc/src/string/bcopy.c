@@ -49,11 +49,11 @@ typedef	long word;		/* "word" used for optimal copy speed */
  */
 #ifdef MEMCOPY
 void *
-memcpy(void *dst0, const void *src0, size_t length)
+CLANG_PORT_DECL(memcpy)(void *dst0, const void *src0, size_t length)
 #else
 #ifdef MEMMOVE
 void *
-memmove(void *dst0, const void *src0, size_t length)
+CLANG_PORT_DECL(memmove)(void *dst0, const void *src0, size_t length)
 #else
 void
 bcopy(const void *src0, void *dst0, size_t length)

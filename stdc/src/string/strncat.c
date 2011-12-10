@@ -38,7 +38,7 @@
  * are written at dst (at most n+1 bytes being appended).  Return dst.
  */
 char *
-strncat(char *dst, const char *src, size_t n)
+CLANG_PORT_DECL(strncat)(char *dst, const char *src, size_t n)
 {
 	if (n != 0) {
 		char *d = dst;

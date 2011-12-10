@@ -31,7 +31,7 @@
 #include <stdc/include/string.h>
 
 char *
-strrchr(const char *p, int ch)
+CLANG_PORT_DECL(strrchr)(const char *p, int ch)
 {
 	char *save;
 

@@ -40,7 +40,7 @@
  * Find the first occurrence of find in s, ignore case.
  */
 char *
-strcasestr(const char *s, const char *find)
+CLANG_PORT_DECL(strcasestr)(const char *s, const char *find)
 {
 	char c, sc;
 	size_t len;

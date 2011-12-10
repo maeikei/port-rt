@@ -32,7 +32,7 @@
 #include <stdc/include/string.h>
 
 size_t
-strlen(const char *str)
+CLANG_PORT_DECL(strlen)(const char *str)
 {
 	const char *s;
 

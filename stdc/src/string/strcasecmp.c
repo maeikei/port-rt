@@ -74,7 +74,7 @@ static const u_char charmap[] = {
 };
 
 int
-strcasecmp(const char *s1, const char *s2)
+CLANG_PORT_DECL(strcasecmp)(const char *s1, const char *s2)
 {
 	const u_char *cm = charmap;
 	const u_char *us1 = (const u_char *)s1;
@@ -87,7 +87,7 @@ strcasecmp(const char *s1, const char *s2)
 }
 
 int
-strncasecmp(const char *s1, const char *s2, size_t n)
+CLANG_PORT_DECL(strncasecmp)(const char *s1, const char *s2, size_t n)
 {
 	if (n != 0) {
 		const u_char *cm = charmap;

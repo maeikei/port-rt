@@ -32,7 +32,7 @@
 #include <stdc/include/string.h>
 
 char *
-strcpy(char *to, const char *from)
+CLANG_PORT_DECL(strcpy)(char *to, const char *from)
 {
 	char *save = to;
 

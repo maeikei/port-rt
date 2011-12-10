@@ -27,7 +27,7 @@
  */
 #include <stdc/include/string.h>
 
-void memswap(void *m1, void *m2, size_t n)
+void CLANG_PORT_DECL(memswap)(void *m1, void *m2, size_t n)
 {
     char*  p     = m1;
     char*  p_end = p + n;

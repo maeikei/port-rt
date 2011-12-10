@@ -31,7 +31,7 @@
 #include <stdc/include/string.h>
 
 char *
-index(const char *p, int ch)
+CLANG_PORT_DECL(index)(const char *p, int ch)
 {
 	for (;; ++p) {
 		if (*p == ch)

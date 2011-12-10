@@ -32,7 +32,7 @@
  */
 #include <stdc/include/string.h>
 
-void *memmem(const void *haystack, size_t n, const void *needle, size_t m)
+void *CLANG_PORT_DECL(memmem)(const void *haystack, size_t n, const void *needle, size_t m)
 {
     if (m > n || !m || !n)
         return NULL;

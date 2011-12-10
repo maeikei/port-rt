@@ -44,7 +44,7 @@
  * If *stringp is NULL, strsep returns NULL.
  */
 char *
-strsep(char **stringp, const char *delim)
+CLANG_PORT_DECL(strsep)(char **stringp, const char *delim)
 {
 	char *s;
 	const char *spanp;

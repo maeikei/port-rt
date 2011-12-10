@@ -28,7 +28,7 @@
 #include <stdc/include/stddef.h>
 #include <stdc/include/string.h>
 
-void *memrchr(const void *s, int c, size_t n)
+void *CLANG_PORT_DECL(memrchr)(const void *s, int c, size_t n)
 {
     if (n > 0) {
         const char*  p = (const char*) s;

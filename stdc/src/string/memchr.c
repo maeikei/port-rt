@@ -28,7 +28,7 @@
 #include <stdc/include/stddef.h>
 #include <stdc/include/string.h>
 
-void *memchr(const void *s, int c, size_t n)
+void *CLANG_PORT_DECL(memchr)(const void *s, int c, size_t n)
 {
     const unsigned char*  p   = s;
     const unsigned char*  end = p + n;

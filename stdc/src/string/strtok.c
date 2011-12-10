@@ -31,11 +31,11 @@
 
 
 char *
-strtok_r(char *s, const char *delim, char **last);
+CLANG_PORT_DECL(strtok_r)(char *s, const char *delim, char **last);
 
 
 char *
-strtok(char *s, const char *delim)
+CLANG_PORT_DECL(strtok)(char *s, const char *delim)
 {
 	static char *last;
 
@@ -43,7 +43,7 @@ strtok(char *s, const char *delim)
 }
 
 char *
-strtok_r(char *s, const char *delim, char **last)
+CLANG_PORT_DECL(strtok_r)(char *s, const char *delim, char **last)
 {
 	char *spanp;
 	int c, sc;

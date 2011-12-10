@@ -36,7 +36,7 @@
  * This function is provided to make libstdc++-v3 usable.
  */
 size_t
-strxfrm(char *s1, const char *s2, size_t n)
+CLANG_PORT_DECL(strxfrm)(char *s1, const char *s2, size_t n)
 {
 	size_t len = strlen(s2) + 1;
 

@@ -31,7 +31,7 @@
 //#include <sys/time.h>
 
 #if 0
-char * strtotimeval (const char *str, struct timeval *ts)
+char * CLANG_PORT_DECL(strtotimeval) (const char *str, struct timeval *ts)
 {
     int n;
     char *s, *s0;
