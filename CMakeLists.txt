@@ -20,6 +20,8 @@ message( STATUS "CMAKE_ASM_COMPILE_OBJECT:			" ${CMAKE_ASM_COMPILE_OBJECT} )
 
 
 
+set(ARCH_TRIPLE "i686-pc-linux-gnu")
+
 if( "i686-pc-linux-gnu" STREQUAL ${ARCH_TRIPLE} )
 	set( TARGET_ARCH x86 )
 	set( TARGET_OS linux )

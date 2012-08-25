@@ -59,13 +59,13 @@ double CLANG_PORT_DECL(atof)(const char *nptr);
 int CLANG_PORT_DECL(atoi)(const char *nptr);
 long int CLANG_PORT_DECL(atol)(const char *nptr);
 long long int CLANG_PORT_DECL(atoll)(const char *nptr);
-double CLANG_PORT_DECL(strtod)(const char * restrict nptr,char ** restrict endptr);
-float CLANG_PORT_DECL(strtof)(const char * restrict nptr,char ** restrict endptr);
-long double CLANG_PORT_DECL(strtold)(const char * restrict nptr,char ** restrict endptr);
-long int CLANG_PORT_DECL(strtol)(const char * restrict nptr,	char ** restrict endptr,int base);
-long long int CLANG_PORT_DECL(strtoll)(const char * restrict nptr, char ** restrict endptr,int base);
-unsigned long int CLANG_PORT_DECL(strtoul)(const char * restrict nptr,char ** restrict endptr,int base);
-unsigned long long int CLANG_PORT_DECL(strtoull)(const char * restrict nptr,char ** restrict endptr,int base);
+double CLANG_PORT_DECL(strtod)(const char *  nptr,char **  endptr);
+float CLANG_PORT_DECL(strtof)(const char *  nptr,char **  endptr);
+long double CLANG_PORT_DECL(strtold)(const char *  nptr,char **  endptr);
+long int CLANG_PORT_DECL(strtol)(const char *  nptr,	char **  endptr,int base);
+long long int CLANG_PORT_DECL(strtoll)(const char *  nptr, char **  endptr,int base);
+unsigned long int CLANG_PORT_DECL(strtoul)(const char *  nptr,char **  endptr,int base);
+unsigned long long int CLANG_PORT_DECL(strtoull)(const char *  nptr,char **  endptr,int base);
 /*
  Pseudo-random sequence generation functions
  */
@@ -108,13 +108,13 @@ CLANG_SELF_TYPE(lldiv_t) CLANG_PORT_DECL(lldiv)(long long int numer, long long i
  Multibyte/wide character conversion functions
  */
 int CLANG_PORT_DECL(mblen)(const char *s, size_t n);
-int CLANG_PORT_DECL(mbtowc)(wchar_t * restrict pwc,const char * restrict s,size_t n);
+int CLANG_PORT_DECL(mbtowc)(wchar_t *  pwc,const char *  s,size_t n);
 int CLANG_PORT_DECL(wctomb)(char *s, wchar_t wc);
 /*
  Multibyte/wide string conversion functions
  */
-size_t CLANG_PORT_DECL(mbstowcs)(wchar_t * restrict pwcs,const char * restrict s,size_t n);
-size_t CLANG_PORT_DECL(wcstombs)(char * restrict s,const wchar_t * restrict pwcs,size_t n);
+size_t CLANG_PORT_DECL(mbstowcs)(wchar_t *  pwcs,const char *  s,size_t n);
+size_t CLANG_PORT_DECL(wcstombs)(char *  s,const wchar_t *  pwcs,size_t n);
 
 
 
@@ -146,31 +146,31 @@ CLANG_PORT_INLINE long long int atoll(const char *nptr)
 {
 	return CLANG_PORT_CALL(atoll)(nptr);
 }
-CLANG_PORT_INLINE double strtod(const char * restrict nptr,char ** restrict endptr)
+CLANG_PORT_INLINE double strtod(const char *  nptr,char **  endptr)
 {
 	return CLANG_PORT_CALL(strtod)(nptr,endptr);
 }
-CLANG_PORT_INLINE float strtof(const char * restrict nptr,char ** restrict endptr)
+CLANG_PORT_INLINE float strtof(const char *  nptr,char **  endptr)
 {
 	return CLANG_PORT_CALL(strtof)(nptr,endptr);
 }
-CLANG_PORT_INLINE long double strtold(const char * restrict nptr,char ** restrict endptr)
+CLANG_PORT_INLINE long double strtold(const char *  nptr,char **  endptr)
 {
 	return CLANG_PORT_CALL(strtold)(nptr,endptr);
 }
-CLANG_PORT_INLINE long int strtol(const char * restrict nptr,	char ** restrict endptr,int base)
+CLANG_PORT_INLINE long int strtol(const char *  nptr,	char **  endptr,int base)
 {
 	return CLANG_PORT_CALL(strtol)(nptr,endptr,base);
 }
-CLANG_PORT_INLINE long long int strtoll(const char * restrict nptr, char ** restrict endptr,int base)
+CLANG_PORT_INLINE long long int strtoll(const char *  nptr, char **  endptr,int base)
 {
 	return CLANG_PORT_CALL(strtoll)(nptr,endptr,base);
 }
-CLANG_PORT_INLINE unsigned long int strtoul(const char * restrict nptr,char ** restrict endptr,int base)
+CLANG_PORT_INLINE unsigned long int strtoul(const char *  nptr,char **  endptr,int base)
 {
 	return CLANG_PORT_CALL(strtoul)(nptr,endptr,base);
 }
-CLANG_PORT_INLINE unsigned long long int strtoull(const char * restrict nptr,char ** restrict endptr,int base)
+CLANG_PORT_INLINE unsigned long long int strtoull(const char *  nptr,char **  endptr,int base)
 {
 	return CLANG_PORT_CALL(strtoull)(nptr,endptr,base);
 }
@@ -298,7 +298,7 @@ CLANG_PORT_INLINE int mblen(const char *s, size_t n)
 {
 	return CLANG_PORT_CALL(mblen)(s,n);
 }
-CLANG_PORT_INLINE int mbtowc(wchar_t * restrict pwc,const char * restrict s,size_t n)
+CLANG_PORT_INLINE int mbtowc(wchar_t *  pwc,const char *  s,size_t n)
 {
 	return CLANG_PORT_CALL(mbtowc)(pwc,s,n);
 }
@@ -310,11 +310,11 @@ CLANG_PORT_INLINE int wctomb(char *s, wchar_t wc)
 /*
  Multibyte/wide string conversion functions
  */
-CLANG_PORT_INLINE size_t mbstowcs(wchar_t * restrict pwcs,const char * restrict s,size_t n)
+CLANG_PORT_INLINE size_t mbstowcs(wchar_t *  pwcs,const char *  s,size_t n)
 {
 	return CLANG_PORT_CALL(mbstowcs)(pwcs,s,n);
 }
-CLANG_PORT_INLINE size_t wcstombs(char * restrict s,const wchar_t * restrict pwcs,size_t n)
+CLANG_PORT_INLINE size_t wcstombs(char *  s,const wchar_t *  pwcs,size_t n)
 {
 	return CLANG_PORT_CALL(wcstombs)(s,pwcs,n);
 }

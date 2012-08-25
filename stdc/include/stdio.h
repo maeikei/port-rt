@@ -180,28 +180,28 @@ char *tmpnam(char *s);
  */
 int fclose(FILE *stream);
 int fflush(FILE *stream);
-FILE *fopen(const char * restrict filename, const char * restrict mode);
-FILE *freopen(const char * restrict filename,const char * restrict mode,FILE * restrict stream);
-void setbuf(FILE * restrict stream,char * restrict buf);
-int setvbuf(FILE * restrict stream,char * restrict buf,int mode, size_t size);
+FILE *fopen(const char * filename, const char * mode);
+FILE *freopen(const char *  filename,const char *  mode,FILE *  stream);
+void setbuf(FILE *  stream,char *  buf);
+int setvbuf(FILE *  stream,char *  buf,int mode, size_t size);
 
 /*
  Formatted input/output functions
  */
-int fprintf(FILE * restrict stream,const char * restrict format, ...);
-int fscanf(FILE * restrict stream,const char * restrict format, ...);
-int printf(const char * restrict format, ...);
-int scanf(const char * restrict format, ...);
-int snprintf(char * restrict s, size_t n,const char * restrict format, ...);
-int sprintf(char * restrict s,const char * restrict format, ...);
-int sscanf(const char * restrict s,const char * restrict format, ...);
-int vfprintf(FILE * restrict stream,const char * restrict format,va_list arg);
-int vfscanf(FILE * restrict stream, const char * restrict format,va_list arg);
-int vprintf(const char * restrict format,va_list arg);
-int vscanf(const char * restrict format, va_list arg);
-int vsnprintf(char * restrict s, size_t n,const char * restrict format,va_list arg);
-int vsprintf(char * restrict s,const char * restrict format,va_list arg);
-int vsscanf(const char * restrict s,const char * restrict format,va_list arg);
+int fprintf(FILE *  stream,const char *  format, ...);
+int fscanf(FILE *  stream,const char *  format, ...);
+int printf(const char *  format, ...);
+int scanf(const char *  format, ...);
+int snprintf(char *  s, size_t n,const char *  format, ...);
+int sprintf(char *  s,const char *  format, ...);
+int sscanf(const char *  s,const char *  format, ...);
+int vfprintf(FILE *  stream,const char *  format,va_list arg);
+int vfscanf(FILE *  stream, const char *  format,va_list arg);
+int vprintf(const char *  format,va_list arg);
+int vscanf(const char *  format, va_list arg);
+int vsnprintf(char *  s, size_t n,const char *  format,va_list arg);
+int vsprintf(char *  s,const char *  format,va_list arg);
+int vsscanf(const char *  s,const char *  format,va_list arg);
 
 
 
@@ -209,9 +209,9 @@ int vsscanf(const char * restrict s,const char * restrict format,va_list arg);
  Formatted input/output functions
  */
 int fgetc(FILE *stream);
-char *fgets(char * restrict s, int n,FILE * restrict stream);
+char *fgets(char *  s, int n,FILE *  stream);
 int fputc(int c, FILE *stream);
-int fputs(const char * restrict s,FILE * restrict stream);
+int fputs(const char *  s,FILE *  stream);
 int getc(FILE *stream);
 int getchar(void);
 int putc(int c, FILE *stream);
@@ -224,8 +224,8 @@ int ungetc(int c, FILE *stream);
 /*
  Formatted input/output functions
  */
-size_t fread(void * restrict ptr,size_t size, size_t nmemb,FILE * restrict stream);
-size_t fwrite(const void * restrict ptr,size_t size, size_t nmemb,FILE * restrict stream);
+size_t fread(void *  ptr,size_t size, size_t nmemb,FILE *  stream);
+size_t fwrite(const void *  ptr,size_t size, size_t nmemb,FILE *  stream);
 
 
 
@@ -233,7 +233,7 @@ size_t fwrite(const void * restrict ptr,size_t size, size_t nmemb,FILE * restric
 /*
  File positioning functions
  */
-int fgetpos(FILE * restrict stream,	fpos_t * restrict pos);
+int fgetpos(FILE *  stream,	fpos_t *  pos);
 int fseek(FILE *stream, long int offset, int whence);
 int fsetpos(FILE *stream, const fpos_t *pos);
 long int ftell(FILE *stream);
