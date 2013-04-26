@@ -1,2 +1,2 @@
-revmove the dependence from such as type/*.h 
-make a pure of std c headers.
+revmove the include of arch and opertion system ,such as type/*.h 
+make a pure clear of std c headers.
